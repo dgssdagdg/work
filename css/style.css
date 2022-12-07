@@ -297,6 +297,9 @@ body {
     width: calc(20px + 40 * ((100vw - 320px) / 1307));
   }
 }
+._title a {
+  color: inherit;
+}
 
 ._buttons-block {
   display: -webkit-box;
@@ -2452,4 +2455,45 @@ body {
   .portfolio {
     padding: 28px 0 22px;
   }
+}
+.pop-up {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.pop-up-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pop-up-img {
+  cursor: pointer;
+}
+
+.pop-up-item {
+  max-width: 100%;
+}
+
+.pop-up-block {
+  position: relative;
+}
+
+.pop-up-close {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  cursor: pointer;
 }

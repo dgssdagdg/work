@@ -37,4 +37,14 @@ window.addEventListener('click', function(event) {
 		windowsFormTwo.classList.toggle('_window-open')
 		windowsFormOne.classList.toggle('_window-close')
 	}
+
+	let popUp = document.querySelector('.pop-up')
+	if (event.target.closest('.pop-up-img')) {
+		let imgSrc = event.target.getAttribute('src');
+		let imgPopUp = document.querySelector('.pop-up-item');
+		imgPopUp.src = imgSrc;
+		popUp.classList.add('pop-up-open')
+	} else if (event.target.closest('.pop-up-close') || !event.target.closest('.pop-up-block')){
+		popUp.classList.remove('pop-up-open')
+	}
 })
