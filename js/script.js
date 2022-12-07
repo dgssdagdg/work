@@ -5,15 +5,22 @@ window.onscroll = function(){
 		headerFix.classList.add('header-fix-active')
 	} else headerFix.classList.remove('header-fix-active');
 }
-
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
+let body = document.body;
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('active');
 	menu.classList.toggle('active');
+	body.classList.toggle('body-overflow')
 })
 
 window.addEventListener('click', function(event) {
+	if (event.target.closest('.header-end-list-arrow')) {
+		let headerList = event.target.closest('.header-end-item');
+		let headerSubList = headerList.querySelector('.header-end-sub-list');
+
+		headerSubList.classList.toggle('header-end-sub-list-active');
+	}
 	let windows = document.querySelector('.window');
 	if (event.target.closest('._btn-close')) {
 
