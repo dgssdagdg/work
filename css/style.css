@@ -2577,7 +2577,6 @@ body {
 }
 
 .add-form-image-imgs {
-  max-width: 550px;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
